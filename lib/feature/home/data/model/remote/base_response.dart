@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'package:offline_first/feature/home/data/model/article_model.dart';
+import 'package:offline_first/feature/home/data/model/remote/article_model.dart';
 
 part 'base_response.freezed.dart';
 part 'base_response.g.dart';

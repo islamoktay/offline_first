@@ -1,5 +1,5 @@
-import 'package:offline_first/feature/home/data/model/base_response.dart';
+import 'package:offline_first/feature/home/domain/entity/article.dart';
 
 abstract class IHomeRepo {
-  Future<BaseResponse> getNews();
+  Future<List<Article>> getNews();
 }

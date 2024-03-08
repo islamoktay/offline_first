@@ -1,23 +1,29 @@
 import 'package:offline_first/core/enums/request_methods.dart';
 import 'package:offline_first/core/services/network_service/i_network_service.dart';
 import 'package:offline_first/feature/home/core/constants/home_network_constants.dart';
-import 'package:offline_first/feature/home/data/model/base_response.dart';
+import 'package:offline_first/feature/home/data/model/remote/article_model.dart';
+import 'package:offline_first/feature/home/data/model/remote/base_response.dart';
+import 'package:offline_first/feature/home/domain/entity/article.dart';
 import 'package:offline_first/feature/home/domain/repo/i_home_repo.dart';
 
 class HomeRepo implements IHomeRepo {
-  const HomeRepo(this.networkService);
-  final INetworkService networkService;
+  const HomeRepo(this._networkService);
+  final INetworkService _networkService;
 
   @override
-  Future<BaseResponse> getNews() async {
+  Future<List<Article>> getNews() async {
     try {
-      final response = await networkService.networkRequest(
+      final response = await _networkService.networkRequest(
         HomeNetworkConstants.homeUrl,
         method: RequestMethods.get,
-        headers: {},
+        headers: HomeNetworkConstants.headers,
       );
 
-      return BaseResponse.fromJson(response as Map<String, dynamic>);
+      return (BaseResponse.fromJson(response as Map<String, dynamic>)
+                  .articles ??
+              <ArticleModel>[])
+          .map((e) => e.toEntity)
+          .toList();
     } catch (_) {
       rethrow;
     }

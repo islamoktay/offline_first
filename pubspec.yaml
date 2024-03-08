@@ -12,11 +12,15 @@ dependencies:
   dio: ^5.4.1
   flutter:
     sdk: flutter
+  flutter_bloc: ^8.1.4
   flutter_svg: ^2.0.10+1
   freezed_annotation: ^2.4.1
   get_it: ^7.6.7
+  isar: ^3.1.0+1
+  isar_flutter_libs: ^3.1.0+1
   json_annotation: ^4.8.1
   lottie: ^3.1.0
+  path_provider: ^2.1.2
 
 
 dev_dependencies:
@@ -26,6 +30,7 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   freezed: ^2.4.7
+  isar_generator: ^3.1.0+1
   json_serializable: ^6.7.1
   very_good_analysis: ^5.1.0
 
