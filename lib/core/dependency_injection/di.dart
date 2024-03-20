@@ -4,7 +4,6 @@ import 'package:isar/isar.dart';
 import 'package:logger/logger.dart';
 import 'package:path_provider/path_provider.dart';
 
-// ignore: directives_ordering
 import 'package:offline_first/core/services/local_db_service/i_local_db_service.dart';
 import 'package:offline_first/core/services/local_db_service/local_db_service.dart';
 import 'package:offline_first/core/services/navigation_service/i_navigation_service.dart';

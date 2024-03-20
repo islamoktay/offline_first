@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:offline_first/core/constant/app_constants.dart';
 import 'package:offline_first/feature/home/presentation/provider/cubit/news_cubit.dart';
+import 'package:offline_first/feature/home/presentation/widgets/news_card.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -28,14 +29,12 @@ class HomeView extends StatelessWidget {
             loading: (value) =>
                 const Center(child: CircularProgressIndicator()),
             loaded: (value) => Center(
-              child: ListView.builder(
+              child: ListView.separated(
                 itemCount: value.articles.length,
+                separatorBuilder: (context, index) => const Divider(),
                 itemBuilder: (context, index) {
                   final article = value.articles[index];
-                  return ListTile(
-                    title: Text(article.titleVal ?? 'No Title'),
-                    subtitle: Text(article.descriptionVal ?? 'No Description'),
-                  );
+                  return NewsCard(article: article);
                 },
               ),
             ),

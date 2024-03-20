@@ -9,3 +9,4 @@ linter:
   rules:
     public_member_api_docs: false
     one_member_abstracts: false
+    directives_ordering: false
