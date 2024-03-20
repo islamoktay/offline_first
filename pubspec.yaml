@@ -39,7 +39,6 @@ flutter_gen:
     flutter_svg: true
     lottie: true
 
-
 flutter:
   uses-material-design: true
   assets:
