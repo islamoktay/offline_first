@@ -10,7 +10,8 @@
     - [d. Run the Flutter App](#d-run-the-flutter-app)
   - [4. Project Structure](#4-project-structure)
   - [5. Folder Structure](#5-folder-structure)
-  - [5. Local DB Service](#5-local-db-service)
+  - [6. Isar package](#6-isar-package)
+  - [7. Local DB Service](#7-local-db-service)
       - [Constructor](#constructor)
       - [Methods](#methods)
       - [getData](#getdata)
@@ -18,8 +19,8 @@
       - [saveData](#savedata)
       - [removeData](#removedata)
       - [Error Handling](#error-handling)
-  - [6. State Management](#6-state-management)
-  - [7. Bloc + Freezed usage](#7-bloc--freezed-usage)
+  - [8. State Management](#8-state-management)
+  - [9. Bloc + Freezed usage](#9-bloc--freezed-usage)
 
 ## 1. App Description
 
@@ -129,7 +130,25 @@ Here's a basic project structure outline that combines Clean Architecture and Do
     - **domain**: It contains domain entities, repositories, and value objects as per DDD principles.
     - **presentation**: It contains user interface components, including pages and widgets.
 
-## 5. Local DB Service
+## 6. Isar package
+
+The Isar package is a high-performance NoSQL database for Flutter and Dart applications. It is designed to be fast, efficient, and easy to use. Here are some key features:
+
+* Type Safety: Isar is a type-safe database, meaning that it enforces data type constraints.
+
+* Zero-Copy: Isar uses a zero-copy architecture which makes it incredibly fast.
+
+* ACID Transactions: Isar supports ACID (Atomicity, Consistency, Isolation, Durability) transactions, ensuring data integrity.
+
+* Queries: Isar supports complex queries, allowing you to filter and sort your data as needed.
+
+* Cross-Platform: Isar works on Android, iOS, macOS, Linux, Windows, and in the browser.
+
+* Object Watchers: Isar can automatically notify your app when objects are changed.
+
+In the context of the project, Isar is used in the LocalDBService class to perform operations on the local database.
+
+## 7. Local DB Service
 
 LocalDBService is a class that implements the ILocalDBService interface. It provides methods for interacting with a local database using the Isar package.
 
@@ -169,7 +188,7 @@ This method removes all data of type E from the local database. It returns a Fut
 #### Error Handling
 All methods in LocalDBService are wrapped in a try-catch block. If an error occurs during a database operation, the error is rethrown to be handled by the caller.
 
-## 6. State Management
+## 8. State Management
 
 Bloc and Cubit are state management patterns commonly used in Flutter applications.
 
@@ -179,7 +198,7 @@ Bloc and Cubit are state management patterns commonly used in Flutter applicatio
 
 Both Bloc and Cubit are based on the concept of reactive programming, where the UI reacts to changes in the state. They provide a predictable and scalable way to manage the state of your Flutter application.
 
-## 7. Bloc + Freezed usage
+## 9. Bloc + Freezed usage
 
 Bloc and Freezed can be used together to manage state in a Flutter application.
 
