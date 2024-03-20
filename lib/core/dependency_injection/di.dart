@@ -60,7 +60,7 @@ Future<void> setupLocator() async {
       () => RemoveOldNewsFromLocalDbUseCase(sl()),
     )
     ..registerLazySingleton<LocalDbDataFlowUseCase>(
-      () => LocalDbDataFlowUseCase(sl(), sl(), sl()),
+      () => LocalDbDataFlowUseCase(sl(), sl(), sl(), sl()),
     )
 
     // blocs
