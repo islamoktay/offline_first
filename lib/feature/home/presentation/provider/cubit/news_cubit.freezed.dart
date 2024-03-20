@@ -21,6 +21,7 @@ mixin _$NewsState {
     required TResult Function() loading,
     required TResult Function(List<Article> articles) loaded,
     required TResult Function(String? message) error,
+    required TResult Function() localDbError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -28,6 +29,7 @@ mixin _$NewsState {
     TResult? Function()? loading,
     TResult? Function(List<Article> articles)? loaded,
     TResult? Function(String? message)? error,
+    TResult? Function()? localDbError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -35,6 +37,7 @@ mixin _$NewsState {
     TResult Function()? loading,
     TResult Function(List<Article> articles)? loaded,
     TResult Function(String? message)? error,
+    TResult Function()? localDbError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -43,6 +46,7 @@ mixin _$NewsState {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_localDbError value) localDbError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,6 +54,7 @@ mixin _$NewsState {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_localDbError value)? localDbError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -57,6 +62,7 @@ mixin _$NewsState {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_localDbError value)? localDbError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -120,6 +126,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function() loading,
     required TResult Function(List<Article> articles) loaded,
     required TResult Function(String? message) error,
+    required TResult Function() localDbError,
   }) {
     return loading();
   }
@@ -130,6 +137,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function()? loading,
     TResult? Function(List<Article> articles)? loaded,
     TResult? Function(String? message)? error,
+    TResult? Function()? localDbError,
   }) {
     return loading?.call();
   }
@@ -140,6 +148,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function()? loading,
     TResult Function(List<Article> articles)? loaded,
     TResult Function(String? message)? error,
+    TResult Function()? localDbError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -154,6 +163,7 @@ class _$LoadingImpl implements _Loading {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_localDbError value) localDbError,
   }) {
     return loading(this);
   }
@@ -164,6 +174,7 @@ class _$LoadingImpl implements _Loading {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_localDbError value)? localDbError,
   }) {
     return loading?.call(this);
   }
@@ -174,6 +185,7 @@ class _$LoadingImpl implements _Loading {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_localDbError value)? localDbError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -260,6 +272,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function() loading,
     required TResult Function(List<Article> articles) loaded,
     required TResult Function(String? message) error,
+    required TResult Function() localDbError,
   }) {
     return loaded(articles);
   }
@@ -270,6 +283,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function()? loading,
     TResult? Function(List<Article> articles)? loaded,
     TResult? Function(String? message)? error,
+    TResult? Function()? localDbError,
   }) {
     return loaded?.call(articles);
   }
@@ -280,6 +294,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function()? loading,
     TResult Function(List<Article> articles)? loaded,
     TResult Function(String? message)? error,
+    TResult Function()? localDbError,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -294,6 +309,7 @@ class _$LoadedImpl implements _Loaded {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_localDbError value) localDbError,
   }) {
     return loaded(this);
   }
@@ -304,6 +320,7 @@ class _$LoadedImpl implements _Loaded {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_localDbError value)? localDbError,
   }) {
     return loaded?.call(this);
   }
@@ -314,6 +331,7 @@ class _$LoadedImpl implements _Loaded {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_localDbError value)? localDbError,
     required TResult orElse(),
   }) {
     if (loaded != null) {
@@ -399,6 +417,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function() loading,
     required TResult Function(List<Article> articles) loaded,
     required TResult Function(String? message) error,
+    required TResult Function() localDbError,
   }) {
     return error(message);
   }
@@ -409,6 +428,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function()? loading,
     TResult? Function(List<Article> articles)? loaded,
     TResult? Function(String? message)? error,
+    TResult? Function()? localDbError,
   }) {
     return error?.call(message);
   }
@@ -419,6 +439,7 @@ class _$ErrorImpl implements _Error {
     TResult Function()? loading,
     TResult Function(List<Article> articles)? loaded,
     TResult Function(String? message)? error,
+    TResult Function()? localDbError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -433,6 +454,7 @@ class _$ErrorImpl implements _Error {
     required TResult Function(_Loading value) loading,
     required TResult Function(_Loaded value) loaded,
     required TResult Function(_Error value) error,
+    required TResult Function(_localDbError value) localDbError,
   }) {
     return error(this);
   }
@@ -443,6 +465,7 @@ class _$ErrorImpl implements _Error {
     TResult? Function(_Loading value)? loading,
     TResult? Function(_Loaded value)? loaded,
     TResult? Function(_Error value)? error,
+    TResult? Function(_localDbError value)? localDbError,
   }) {
     return error?.call(this);
   }
@@ -453,6 +476,7 @@ class _$ErrorImpl implements _Error {
     TResult Function(_Loading value)? loading,
     TResult Function(_Loaded value)? loaded,
     TResult Function(_Error value)? error,
+    TResult Function(_localDbError value)? localDbError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -469,4 +493,118 @@ abstract class _Error implements NewsState {
   @JsonKey(ignore: true)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$localDbErrorImplCopyWith<$Res> {
+  factory _$$localDbErrorImplCopyWith(
+          _$localDbErrorImpl value, $Res Function(_$localDbErrorImpl) then) =
+      __$$localDbErrorImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$localDbErrorImplCopyWithImpl<$Res>
+    extends _$NewsStateCopyWithImpl<$Res, _$localDbErrorImpl>
+    implements _$$localDbErrorImplCopyWith<$Res> {
+  __$$localDbErrorImplCopyWithImpl(
+      _$localDbErrorImpl _value, $Res Function(_$localDbErrorImpl) _then)
+      : super(_value, _then);
+}
+
+/// @nodoc
+
+class _$localDbErrorImpl implements _localDbError {
+  const _$localDbErrorImpl();
+
+  @override
+  String toString() {
+    return 'NewsState.localDbError()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$localDbErrorImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() loading,
+    required TResult Function(List<Article> articles) loaded,
+    required TResult Function(String? message) error,
+    required TResult Function() localDbError,
+  }) {
+    return localDbError();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? loading,
+    TResult? Function(List<Article> articles)? loaded,
+    TResult? Function(String? message)? error,
+    TResult? Function()? localDbError,
+  }) {
+    return localDbError?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? loading,
+    TResult Function(List<Article> articles)? loaded,
+    TResult Function(String? message)? error,
+    TResult Function()? localDbError,
+    required TResult orElse(),
+  }) {
+    if (localDbError != null) {
+      return localDbError();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Loading value) loading,
+    required TResult Function(_Loaded value) loaded,
+    required TResult Function(_Error value) error,
+    required TResult Function(_localDbError value) localDbError,
+  }) {
+    return localDbError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Loading value)? loading,
+    TResult? Function(_Loaded value)? loaded,
+    TResult? Function(_Error value)? error,
+    TResult? Function(_localDbError value)? localDbError,
+  }) {
+    return localDbError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Loading value)? loading,
+    TResult Function(_Loaded value)? loaded,
+    TResult Function(_Error value)? error,
+    TResult Function(_localDbError value)? localDbError,
+    required TResult orElse(),
+  }) {
+    if (localDbError != null) {
+      return localDbError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class _localDbError implements NewsState {
+  const factory _localDbError() = _$localDbErrorImpl;
 }

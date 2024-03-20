@@ -459,6 +459,14 @@ packages:
       url: "https://artifactory.thy.com/artifactory/api/pub/pub-thy/"
     source: hosted
     version: "3.0.0"
+  logger:
+    dependency: "direct main"
+    description:
+      name: logger
+      sha256: b3ff55aeb08d9d8901b767650285872cb1bb8f508373b3e348d60268b0c7f770
+      url: "https://artifactory.thy.com/artifactory/api/pub/pub-thy/"
+    source: hosted
+    version: "2.1.0"
   logging:
     dependency: transitive
     description:

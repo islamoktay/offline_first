@@ -30,4 +30,16 @@ extension ArticleModelX on ArticleLocalModel {
       urlVal: url,
     );
   }
+
+  ArticleLocalModel fromEntity(Article article) {
+    return ArticleLocalModel()
+      ..source = article.sourceVal
+      ..author = article.authorVal
+      ..content = article.contentVal
+      ..description = article.descriptionVal
+      ..publishedAt = article.publishedAtVal
+      ..title = article.titleVal
+      ..urlToImage = article.urlToImageVal
+      ..url = article.urlVal;
+  }
 }

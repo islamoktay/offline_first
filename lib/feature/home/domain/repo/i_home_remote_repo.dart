@@ -1,5 +1,5 @@
 import 'package:offline_first/feature/home/domain/entity/article.dart';
 
-abstract class IHomeRepo {
+abstract class IHomeRemoteRepo {
   Future<List<Article>> getNews();
 }

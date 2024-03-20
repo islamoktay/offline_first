@@ -146,7 +146,15 @@ ArticleLocalModel _articleLocalModelDeserialize(
   Map<Type, List<int>> allOffsets,
 ) {
   final object = ArticleLocalModel();
+  object.author = reader.readStringOrNull(offsets[0]);
+  object.content = reader.readStringOrNull(offsets[1]);
+  object.description = reader.readStringOrNull(offsets[2]);
   object.id = id;
+  object.publishedAt = reader.readDateTimeOrNull(offsets[3]);
+  object.source = reader.readStringOrNull(offsets[4]);
+  object.title = reader.readStringOrNull(offsets[5]);
+  object.url = reader.readStringOrNull(offsets[6]);
+  object.urlToImage = reader.readStringOrNull(offsets[7]);
   return object;
 }
 

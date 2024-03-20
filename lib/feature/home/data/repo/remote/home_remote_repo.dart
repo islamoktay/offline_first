@@ -4,10 +4,10 @@ import 'package:offline_first/feature/home/core/constants/home_network_constants
 import 'package:offline_first/feature/home/data/model/remote/article_model.dart';
 import 'package:offline_first/feature/home/data/model/remote/base_response.dart';
 import 'package:offline_first/feature/home/domain/entity/article.dart';
-import 'package:offline_first/feature/home/domain/repo/i_home_repo.dart';
+import 'package:offline_first/feature/home/domain/repo/i_home_remote_repo.dart';
 
-class HomeRepo implements IHomeRepo {
-  const HomeRepo(this._networkService);
+class HomeRemoteRepo implements IHomeRemoteRepo {
+  const HomeRemoteRepo(this._networkService);
   final INetworkService _networkService;
 
   @override
@@ -18,7 +18,6 @@ class HomeRepo implements IHomeRepo {
         method: RequestMethods.get,
         headers: HomeNetworkConstants.headers,
       );
-
       return (BaseResponse.fromJson(response as Map<String, dynamic>)
                   .articles ??
               <ArticleModel>[])

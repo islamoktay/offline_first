@@ -1,13 +1,17 @@
-import 'package:offline_first/core/services/local_db_service/i_local_db_service.dart';
+import 'package:logger/logger.dart';
+
+import 'package:offline_first/core/dependency_injection/di.dart';
 import 'package:offline_first/core/usecase/i_usecase.dart';
 import 'package:offline_first/feature/home/domain/entity/article.dart';
+import 'package:offline_first/feature/home/domain/repo/i_home_local_repo.dart';
 
 class GetNewsFromLocalDBUsecase implements Usecase<List<Article>, NoParams> {
-  const GetNewsFromLocalDBUsecase(this._localDBService);
-  final ILocalDBService _localDBService;
+  const GetNewsFromLocalDBUsecase(this._homeLocalRepo);
+  final IHomeLocalRepo _homeLocalRepo;
 
   @override
   Future<List<Article>> call(_) async {
-    return _localDBService.getData<Article>();
+    sl<Logger>().i('Getting values from LOCAL...');
+    return _homeLocalRepo.getLocalData();
   }
 }
