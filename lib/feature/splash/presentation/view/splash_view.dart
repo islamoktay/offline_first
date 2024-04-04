@@ -16,10 +16,7 @@ class SplashView extends StatelessWidget {
     Future.delayed(const Duration(seconds: 2), () async {
       await sl<INavigationService>().pushReplacement(
         context,
-        BlocProvider<NewsCubit>(
-          create: (inner) => sl<NewsCubit>(),
-          child: const HomeView(),
-        ),
+        const HomeView(),
       );
     });
     return Scaffold(
