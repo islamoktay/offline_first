@@ -106,7 +106,7 @@ This structure promotes separation of concerns and allows you to develop the app
 
 Here's a basic project structure outline that combines Clean Architecture and Domain-Driven Design (DDD) principles approaches:
 
-    ttsterminal-mobil/
+    offline-first/
       └── lib/
            ├── core/
            │     ├── constant/
