@@ -1,34 +1,27 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
-
 import 'package:offline_first/core/constant/gen/assets.gen.dart';
 import 'package:offline_first/core/dependency_injection/di.dart';
 import 'package:offline_first/core/services/navigation_service/i_navigation_service.dart';
-import 'package:offline_first/feature/splash/presentation/cubit/splash_cubit.dart';
+import 'package:offline_first/feature/home/presentation/view/home_view.dart';
 
 class SplashView extends StatelessWidget {
   const SplashView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => SplashCubit()
-        ..navigateToHomeView(
-          context: context,
-          navigationService: sl<INavigationService>(),
+    Future.delayed(const Duration(seconds: 2), () async {
+      await sl<INavigationService>().pushReplacement(
+        context,
+        const HomeView(),
+      );
+    });
+    return Scaffold(
+      body: Center(
+        child: Assets.splashAnimation.lottie(
+          height: 300,
+          fit: BoxFit.cover,
         ),
-      child: BlocBuilder<SplashCubit, SplashState>(
-        builder: (context, state) {
-          return Scaffold(
-            body: Center(
-              child: Assets.splashAnimation.lottie(
-                height: 300,
-                fit: BoxFit.cover,
-              ),
-            ),
-          );
-        },
       ),
     );
   }
